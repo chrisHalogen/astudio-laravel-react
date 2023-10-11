@@ -1,0 +1,82 @@
+@import "../../global.scss";
+
+.sidebar {
+  width: 20rem;
+  background-color: $soft-bg;
+  height: 100vh;
+  padding: 2rem 0;
+  overflow-y: auto;
+  box-shadow: 0px 2px 20px 3px rgba($color: $dark-color, $alpha: 0.15);
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $soft-bg;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $soft-bg;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: $dark-bg;
+  }
+
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+      border-radius: 100%;
+      box-shadow: 0px 0px 15px 6px rgba($color: $dark-color, $alpha: 0.25);
+    }
+  }
+
+  .navigation {
+    margin: 0.5rem 1.5rem;
+
+    .links-title {
+      color: $soft-color;
+      @include small-text();
+    }
+
+    a {
+      display: block;
+      margin: 0.5rem 0;
+      @include regular-text();
+      color: $main-color;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      transition: 0.5s ease;
+      display: grid;
+      grid-template-columns: 2rem auto;
+      align-items: center;
+
+      span {
+        margin-left: 1rem;
+      }
+
+      svg {
+        font-size: 1.5rem;
+      }
+
+      &:hover {
+        background-color: $main-bg;
+      }
+
+      &.active {
+        background-color: $black;
+        color: $blue;
+      }
+    }
+  }
+}

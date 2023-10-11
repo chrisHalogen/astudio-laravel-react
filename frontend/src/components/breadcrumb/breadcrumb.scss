@@ -1,0 +1,14 @@
+@import "../../global.scss";
+
+.breadcrumb {
+  @include small-text();
+  a:nth-child(1) {
+    color: $soft-color;
+    margin-right: 0.25rem;
+  }
+
+  a:nth-child(2) {
+    color: $black;
+    margin-left: 0.25rem;
+  }
+}

@@ -1,0 +1,15 @@
+@import "../../global.scss";
+
+.dataTable {
+  #\:r2\: {
+    color: $theme-color !important;
+
+    .product-image {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+  }
+}
